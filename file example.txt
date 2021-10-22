@@ -1,0 +1,7 @@
+directed, undirected: D,U,d,u |weighted, not weighted; w,n
+num_nodes: number
+node labels, space separated: A B C D
+adjacency matrix: NxN
+0 0 1
+0 1 0
+1 0 1
