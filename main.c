@@ -79,5 +79,53 @@ int main(int argc, char *argv[]){
 
     FILE* out_file = fopen(argv[2],"w");
     
-    if(directed)
+    if(directed){
+        fprintf(out_file,"digraph {\n");
+        if(weighted){
+            for(int i = 0; i < num_node ; i++){
+                for(int j = 0; j < num_node; j++){
+                    if(matrix[i][j] == 0) continue;
+                    else{
+                        fprintf(out_file,"\t%s -> %s [label = \"%d\"];\n",labels[i],labels[j],matrix[i][j]);
+                    }
+                }
+            }
+        }
+        else if(!weighted){
+            for(int i = 0; i < num_node ; i++){
+                for(int j = 0; j < num_node; j++){
+                    if(matrix[i][j] == 0) continue;
+                    else{
+                        fprintf(out_file,"\t%s -> %s;\n",labels[i],labels[j]);
+                    }
+                }
+            }
+        }
+        fprintf(out_file,"}\n");
+    }
+
+    else if(!directed){
+        fprintf(out_file,"graph {\n");
+        if(weighted){
+            for(int i = 0; i < num_node ; i++){
+                for(int j = 0; j < num_node; j++){
+                    if(matrix[i][j] == 0) continue;
+                    else{
+                        fprintf(out_file,"\t%s -- %s [label = \"%d\"];\n",labels[i],labels[j],matrix[i][j]);
+                    }
+                }
+            }
+        }
+        else if(!weighted){
+            for(int i = 0; i < num_node ; i++){
+                for(int j = 0; j < num_node; j++){
+                    if(matrix[i][j] == 0) continue;
+                    else{
+                        fprintf(out_file,"\t%s -- %s;\n",labels[i],labels[j]);
+                    }
+                }
+            }
+        }
+        fprintf(out_file,"}\n");
+    }
 }
