@@ -77,5 +77,7 @@ int main(int argc, char *argv[]){
     //     printf("\n");
     // }
 
+    FILE* out_file = fopen(argv[2],"w");
     
+    if(directed)
 }
