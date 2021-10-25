@@ -1,0 +1,7 @@
+graph {
+	A -- B [label = "5"];
+	A -- C [label = "12"];
+	B -- A [label = "10"];
+	B -- C [label = "9"];
+	C -- A [label = "110"];
+}
