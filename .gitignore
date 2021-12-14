@@ -1,2 +1,4 @@
 
 *.json
+*.dot
+tmp.c
