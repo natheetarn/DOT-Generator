@@ -1,0 +1,26 @@
+u N
+4
+JACK JOHN TOM MARY
+0 0 0 1
+0 0 1 1
+1 0 1 1
+1 1 1 0
+u N
+4
+JACK JOHN TOM MARY
+0 0 0 1
+0 0 1 1
+1 0 1 1
+1 1 1 0
+D w
+3
+A B C
+0 5 12
+10 0 9
+110 0 0
+D w
+3
+A B C
+0 5 12
+10 0 9
+110 0 0
